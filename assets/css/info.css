@@ -1,35 +1,34 @@
 .info {
     scroll-snap-align: center;
+
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 3vw;
+    gap: 10vw;
 
-    padding: 0 5vw;
+    padding: inherit 3vw 0 3vw;
 }
 
 .info-text {
-    width: 50%;
+    width: 40%;
     display: flex;
     flex-flow: column wrap;
-    font-size: clamp(1rem, 1vw, 4rem);
+    font-size: clamp(1rem, 1.3vw, 4rem);
     font-weight: 400;
 }
 
 .info-text h2 {
-    font-size: clamp(2.5rem, 2vw, 6rem);
+    font-size: clamp(2.5rem, 3vw, 6rem);
+    font-weight: normal;
 }
 
 .info-text-img {
-    width: 50%;
-    flex: 1 1 100px;
+    width: 25%;
 }
 
 .info-text-img img{
-    object-fit: fill;
     width: 100%;
-    border-radius: 20px;
-    box-shadow: 10px 10px 10px black;
+    object-fit: cover;
     
 }

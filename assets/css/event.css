@@ -8,17 +8,32 @@
 }
 
 .event-conteiner {
-    width: 60vw;
+    padding: 1vw 5vw 0 5vw;
+    width: 80%;
+
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-flow: column nowrap;
+
+    object-fit: 16/9;
+    
+
+
 }
 
 
 .event-conteiner div > img {
     width: 100%;
     object-fit: fill;
+    border-radius: 20px;
+    z-index: -1;
+
+}
+
+.event-title {
+    font-size: clamp(2rem, 4vw, 5rem);
 }
 
 .img-principal {
@@ -26,16 +41,32 @@
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
+    position: relative;
+
+    object-fit: fill;
+    max-height: 80vh;
+    overflow: hidden;
+    border-radius: 20px;
+
 }
 
+
+
 .event-text {
-    width: 70%;
+    width: 100%;
+    margin: 30px;
+    padding: 20px;
+
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     position: absolute;
+
     color: var(--color-white);
     font-size: clamp(2rem, 3vw, 5rem);
+
+
+
 }
 
 .event-text i:hover {
@@ -44,6 +75,7 @@
 }
 
 .event-slide-ball {
-    position: relative;
+    position: absolute;
     bottom: 50px;
+    z-index: 2;
 }

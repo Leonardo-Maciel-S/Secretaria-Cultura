@@ -24,20 +24,21 @@
     <!-- Barra de navegação -->
     <nav id="nave-bar" class="nav-bar">
         <div class="logo-conteiner ">
-            <img class="logo" src="assets/img/logo-secretaria.png" alt="">
-            <span>Secretaria</span>
+            <img class="logo" src="assets/img/Logos/horizontal-Branca.svg" alt="">
         </div>
 
         <div class="social-media">
             <a href="">
-                <i class="fa-brands fa-instagram fa-2xl" style="color: #1D1D1B;"></i>
+                <i class="fa-brands fa-instagram fa-2xl" style="color: #EDEDED;"></i>
             </a>
+            
             <a href="">
-                <i class="fa-brands fa-facebook fa-2xl" style="color: #1D1D1B;"></i>
+                <i class="fa-brands fa-whatsapp fa-2xl" style="color: #EDEDED;"></i>
             </a>
 
             <a href="">
-               <i class="fa-brands fa-whatsapp fa-2xl" style="color: #1D1D1B;"></i>
+                <!-- <i class="fa-brands fa-facebook fa-2xl" style="color: #EDEDED;"></i> -->
+                <i class="fa-brands fa-facebook-f fa-2xl" style="color: #EDEDED;"></i>
             </a>
         </div>
     </nav>
@@ -58,33 +59,41 @@
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem odio aliquid, perferendis quisquam et quis consequuntur quos eos reprehenderit dolorem nesciunt modi fuga optio nihil suscipit dolor maiores fugit repellendus? Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos repellendus ullam veritatis dolores voluptatum ratione maiores voluptates. Accusantium aliquid, nisi exercitationem iusto debitis eaque, reiciendis consequatur culpa nesciunt ea laboriosam.</p>
         </div>
         <div class="info-text-img">
-            <img src="assets/img/info-img.jpg" alt="">
+            <img src="assets/img/Logos/LOGO-SEC-DE-E-CULTURA.png" alt="">
         </div>
     </section>
    
     <!-- Eventos -->
     
-    <section id="event" class="event bg-white area-site">
+    <section id="event" class="event area-site">
+
         <div class="event-conteiner">
+        
+            <!-- <h2 class="event-title">Eventos</h2> -->
+
+            <div class="img-sombra" ></div>
 
             <div class="img-principal" >
-                <img id="img-principal" src="assets/img/break dance.jpg" alt="" class="img-event ">
-            <div class="event-slide-ball">
 
+                <img id="img-principal" src="assets/img/break dance.jpg" alt="" class="img-event ">
+
+                <div class="event-text">
+                    <i id="fa-arrow-left" class="fa-solid fa-caret-left fa-xl" style="color: #EDEDED;" onclick="changeEvent('left')"></i>
+                    <!-- <span id="event-title">Breakdance</span> -->
+                    <i id="fa-arrow-right" class="fa-solid fa-caret-right fa-xl" style="color: #EDEDED;"></i>
+                </div>
+            </div>
+
+            <div class="img-sombra" ></div>
+
+            <div id="event-slide-ball" class="event-slide-ball">
                 <i id="fa-circle-left" class="fa-solid fa-circle" style="color: #EDEDED;"></i>
-                <i id="fa-circle-middle" class="fa-solid fa-circle" style="color: #E6332A;"></i>
+                <i id="fa-circle-middle" class="fa-solid fa-circle" style="color: #FFD700;"></i>
                 <i id="fa-circle-right" class="fa-solid fa-circle" style="color: #EDEDED;"></i>
             </div>
-            </div>
 
-            <div class="event-text">
-                <i id="fa-arrow-left" class="fa-solid fa-arrow-left" style="color: #EDEDED;" onclick="changeEvent('left')"></i>
-                <span id="event-title">Break Dance</span>
-                <i id="fa-arrow-right" class="fa-solid fa-arrow-right" style="color: #EDEDED;"></i>
-            </div>
-
-            
         </div>
+
     </section>
 
     <script src="assets/scripts/script.js"></script>

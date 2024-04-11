@@ -5,24 +5,42 @@ const imgPrincipal = document.getElementById('img-principal')
 
 const events = [
     {
-        eventTitle: 'Soccer',
-        path: 'assets/img/soccer.jpg'
+        eventTitle: 'Futebol',
+        path: 'assets/img/soccer.jpg',
     }, 
     {
-        eventTitle: 'Break Dance',
+        eventTitle: 'Breakdance',
         path: 'assets/img/break dance.jpg'
     }, 
     {
         eventTitle: 'Show',
-        path: 'assets/img/show.jpg'
+        path: 'assets/img/show.jpeg'
     },
 ]
 
 
+function createSlideBall() {
+    const div = document.getElementById('event-slide-ball')
+    console.log(div) 
+    let slideBallContent = ``
+
+    for (let index = 0; index < events.length; index++) {
+        if (index == position) {
+            slideBallContent = slideBallContent + `
+            <i id="fa-circle-middle" class="fa-solid fa-circle" style="color: #FFD700;"></i>
+            `
+        } else {
+            slideBallContent = slideBallContent + `
+            <i id="fa-circle-middle" class="fa-solid fa-circle" style="color: #EDEDED;"></i>
+            `
+        }
+    }
+
+    div.innerHTML = slideBallContent
+}
+
 let position = Math.floor(events.length / 2)
 
-console.log(
-events[position].path)
 
 async function changeEvent(direction) {
 
@@ -58,9 +76,13 @@ async function changeEvent(direction) {
 
     }
 
+    createSlideBall()
+
  
 }
 
 
 arrowLeft.onclick = () => { changeEvent('left') }
 arrowRight.onclick = () => {changeEvent('right')}
+
+
