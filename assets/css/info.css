@@ -1,0 +1,33 @@
+.info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 3vw;
+
+    padding: 0 5vw;
+}
+
+.info-text {
+    width: 50%;
+    display: flex;
+    flex-flow: column wrap;
+    font-size: clamp(1rem, .5vw, 4rem);
+    font-weight: 400;
+}
+
+.info-text h2 {
+    font-size: clamp(2.5rem, 2vw, 6rem);
+}
+
+.info-text-img {
+    width: 50%;
+    flex: 1 1 100px;
+}
+
+.info-text-img img{
+    object-fit: fill;
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px black;
+}

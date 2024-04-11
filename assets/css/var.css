@@ -1,0 +1,26 @@
+:root {
+    --color-blue-dark: #04045a;
+    --color-icon-media: #0d0d0d;
+    --font-size-p: clamp(1.5rem, 1vw, 4rem);
+    --font-site-h: clamp(2.5rem, 2.5vw, 6rem);
+
+}
+
+.area-site {
+    width: 100vw;
+    max-height: 100vh;
+    min-height: 100vh;
+    padding-top: 100px;
+}
+
+.bg-white {
+    background-color: white;
+}
+
+.bg-dark {
+    background-attachment: var(--color-blue-dark);
+}
+
+.hidden {
+    display: none;
+}
