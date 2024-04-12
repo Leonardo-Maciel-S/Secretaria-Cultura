@@ -1,5 +1,4 @@
 .info {
-    scroll-snap-align: center;
 
     display: flex;
     flex-wrap: wrap;

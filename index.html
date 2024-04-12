@@ -19,11 +19,13 @@
     <link rel="stylesheet" href="assets/css/cover.css">
     <link rel="stylesheet" href="assets/css/info.css">
     <link rel="stylesheet" href="assets/css/event.css">
+    <link rel="stylesheet" href="assets/css/gallery.css">
+
 </head>
 <body>
     <!-- Barra de navegação -->
     <nav id="nave-bar" class="nav-bar">
-        <div class="logo-conteiner ">
+        <div class="logo-container ">
             <img class="logo" src="assets/img/Logos/horizontal-Branca.svg" alt="">
         </div>
 
@@ -44,7 +46,7 @@
     </nav>
     
     <!-- Capa -->
-    <section id="cover" class="cover-conteiner">
+    <section id="cover" class="cover-container area-site">
         <div class="cover-text">
             <h1>Secretaria de Cultura</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit cumque, animi qui dolore quos ab sequi iure voluptatem ut fuga odio eos. Ipsa voluptates cumque maiores recusandae, iusto natus! Delectus?</p>
@@ -67,7 +69,7 @@
     
     <section id="event" class="event area-site">
 
-        <div class="event-conteiner">
+        <div class="event-container">
         
             <!-- <h2 class="event-title">Eventos</h2> -->
 
@@ -75,11 +77,10 @@
 
             <div class="img-principal" >
 
-                <img id="img-principal" src="assets/img/break dance.jpg" alt="" class="img-event ">
+                <img id="img-principal" src="https://images.pexels.com/photos/2820896/pexels-photo-2820896.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" class="img-event ">
 
                 <div class="event-text">
-                    <i id="fa-arrow-left" class="fa-solid fa-caret-left fa-xl" style="color: #EDEDED;" onclick="changeEvent('left')"></i>
-                    <!-- <span id="event-title">Breakdance</span> -->
+                    <i id="fa-arrow-left" class="fa-solid fa-caret-left fa-xl" style="color: #EDEDED;"></i>
                     <i id="fa-arrow-right" class="fa-solid fa-caret-right fa-xl" style="color: #EDEDED;"></i>
                 </div>
             </div>
@@ -94,6 +95,33 @@
 
         </div>
 
+    </section>
+
+    <!-- Pontos Turisticos / Galeria -->
+
+    <section id="gallery" class="gallery area-site bg-white">
+        <h2>Pontos Turisticos / Onde Visitar / Galeria</h2>
+        <div id="gallery-details" class="gallery-details">    
+            
+            <img id="details-img" class="details-img" src="assets/img/gallery/lagoa.png" alt="">
+
+            <div>
+                <div class="details-info-container">
+                    <h3 id="details-title">Lugar</h3>
+                    <p id="details-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est hic aut doloremque, omnis sit iure veniam porro libero inventore assumenda dolorum facilis sequi, animi ipsa? Non officia dolores ratione hic?</p>            
+                </div>
+                <div>
+                    <img id="details-map" class="details-map" src="assets/img/secretaria-maps.png" alt="">
+                </div>
+            </div>
+
+        </div>
+        <div class="gallery-container">
+            <div class="gallery-img">
+                <img src="" alt="">
+
+            </div>
+        </div>
     </section>
 
     <script src="assets/scripts/script.js"></script>

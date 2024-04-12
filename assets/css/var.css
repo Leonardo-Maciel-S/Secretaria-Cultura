@@ -13,6 +13,8 @@
     width: 100vw;
     min-height: 100vh;
     padding-top: 5vw;
+    scroll-snap-align: center;   
+
 }
 
 .bg-white {
@@ -25,6 +27,10 @@
 
 .hidden {
     visibility: hidden;
+}
+
+.display-none {
+    display: none;
 }
 
 /* FONTE DOS TITULOS */

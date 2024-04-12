@@ -6,7 +6,7 @@
 
 html {
     scroll-behavior: smooth;
-    scrollbar-width: none;
+    scrollbar-width: thin;
     scroll-snap-type: y proximity;
     font-family: var(--font-title);
     font-weight: normal;
