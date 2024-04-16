@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="assets/css/info.css">
     <link rel="stylesheet" href="assets/css/event.css">
     <link rel="stylesheet" href="assets/css/gallery.css">
+    <link rel="stylesheet" href="assets/css/host-laws.css">
 
 </head>
 <body>
@@ -71,8 +72,6 @@
 
         <div class="event-container">
         
-            <!-- <h2 class="event-title">Eventos</h2> -->
-
             <div class="img-sombra" ></div>
 
             <div class="img-principal" >
@@ -98,10 +97,15 @@
     </section>
 
     <!-- Pontos Turisticos / Galeria -->
+    
 
     <section id="gallery" class="gallery area-site bg-white">
+
         <h2>Pontos Turisticos / Onde Visitar / Galeria</h2>
+
+        <!-- essa div vai ficar oculta -->
         <div id="gallery-details" class="gallery-details">    
+            <i  class="fa-solid fa-xmark fa-xl close" onclick="closeDetails()"></i>
             
             <img id="details-img" class="details-img" src="assets/img/gallery/lagoa.png" alt="">
 
@@ -116,13 +120,86 @@
             </div>
 
         </div>
-        <div class="gallery-container">
-            <div class="gallery-img">
-                <img src="" alt="">
 
-            </div>
+        <div id="gallery-container" class="gallery-container">
+            
         </div>
     </section>
+
+    <section id="host" class="host area-site">
+
+        <div id="host-details" class="host-details">    
+            
+            <img id="host-img" class="host-img" src="assets/img/gallery/lagoa.png" alt="">
+
+            <div>
+                <div class="host-info-container">
+                    <h3 id="host-title">Lugar</h3>
+                    <p id="host-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est hic aut doloremque, omnis sit iure veniam porro libero inventore assumenda dolorum facilis sequi, animi ipsa? Non officia dolores ratione hic?</p>            
+                </div>
+                <div>
+                    <img id="host-map" class="host-map" src="assets/img/secretaria-maps.png" alt="">
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="host-container-host" >
+            <h3>Hospedagem</h3>
+
+            <div class="host-container">
+
+                <div class="host-preview">
+                    <div class="host-preview-img">
+                        <img src="assets/img/gallery/igreja.jpeg" alt="" onclick="openHost('4')">
+                    </div>
+                    <div>
+                        <h4>Nome</h4>
+                        <p>description</p>
+                    </div>
+                </div>
+                
+                <div class="host-preview">
+                    <div class="host-preview-img">
+                        <img src="assets/img/gallery/igreja.jpeg" alt="">
+                    </div>
+                    <div>
+                        <h4>Nome</h4>
+                        <p>description</p>
+                    </div>
+                </div>
+
+                <div class="host-preview">
+                    <div class="host-preview-img">
+                        <img src="assets/img/gallery/igreja.jpeg" alt="">
+                    </div>
+                    <div>
+                        <h4>Nome</h4>
+                        <p>description</p>
+                    </div>
+                </div>
+
+                <div class="host-preview">
+                    <div class="host-preview-img">
+                        <img src="assets/img/gallery/igreja.jpeg" alt="">
+                    </div>
+                    <div>
+                        <h4>Nome</h4>
+                        <p>description</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <section class="laws area-site bg-blue">
+
+            <h3>Leis de incentivo à cultura</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eum tempore quidem reprehenderit assumenda veritatis nam fugiat! Eos repudiandae, laudantium asperiores natus unde rem illum quas aspernatur totam consequuntur? Odio.</p>
+
+        </section>
 
     <script src="assets/scripts/script.js"></script>
 </body>

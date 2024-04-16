@@ -3,6 +3,7 @@
     --color-black: #1D1D1B;
     --color-yellow: #FFD700;
     --color-white: #EDEDED;
+    --color-red: #E6332A;
     --font-title: "Bebas Neue", sans-serif;
     --font-bold: 400;
     --fonte-p: "Sora", sans-serif;
@@ -10,7 +11,7 @@
 }
 
 .area-site {
-    width: 100vw;
+    max-width: 100vw;
     min-height: 100vh;
     padding-top: 5vw;
     scroll-snap-align: center;   
@@ -21,12 +22,13 @@
     background-color: var(--color-white);
 }
 
-.bg-dark {
+.bg-blue {
     background-color: var(--color-blue);
 }
 
 .hidden {
     visibility: hidden;
+
 }
 
 .display-none {

@@ -72,10 +72,20 @@
 .event-text i:hover {
     transform: scale(1.3);
     cursor: pointer;
+    text-shadow: 10px 2px 5px var(--color-blue);
+
+}
+
+#fa-arrow-left:hover {
+    text-shadow: -10px 2px 5px var(--color-blue);
 }
 
 .event-slide-ball {
     position: absolute;
     bottom: 50px;
     z-index: 2;
+}
+
+.event-slide-ball i {
+    text-shadow: 3px 3px black;
 }

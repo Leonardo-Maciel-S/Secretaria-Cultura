@@ -6,17 +6,38 @@
 
     padding: 5vw;
     position: relative  ;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: black;
+    animation: all linear 300ms ease;
+}
+
+
+.close:hover {
+    cursor: pointer;
+    transform: scale(1.2);    
+    color: #E6332A;;
     
 }
+
 .gallery-details {
     display: none;
+    flex-direction: column;
+
     margin-top: 2vw;
     width: 50vw;
     max-height: 70vh;
+    
     position: absolute;
     z-index: 20000;
-    border: 1px solid red;
-    
+    border-radius: 20px;
+
+    overflow: hidden;
+
 }
 
 .gallery-details div {
@@ -26,8 +47,10 @@
 
 .details-img {
     width: 100%;
-    height: 60%;
+    height: 50vh;
     object-fit: cover;
+    border: 1px solid blue;
+    
 
 }
 
@@ -50,7 +73,34 @@
 }
 
 .gallery-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    height: 20px;
+    padding: 20px;
+    gap: 20px;
 }
+
+.gallery-field {
+    height: 100%;
+    aspect-ratio: 4/3;
+}
+
+.gallery-img {
+    width: 20vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.gallery-img img {
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 4/3;
+
+}
+
+
 

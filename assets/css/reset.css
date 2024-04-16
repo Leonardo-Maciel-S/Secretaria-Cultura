@@ -10,6 +10,7 @@ html {
     scroll-snap-type: y proximity;
     font-family: var(--font-title);
     font-weight: normal;
+    max-width: 100vw;
 }
 
 

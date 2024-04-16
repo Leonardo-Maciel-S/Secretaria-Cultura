@@ -2,6 +2,11 @@ const arrowLeft = document.getElementById('fa-arrow-left')
 const arrowRight = document.getElementById('fa-arrow-right')
 const imgPrincipal = document.getElementById('img-principal')
 
+const galleryContainer = document.getElementById('gallery-container')
+const galleryDetails = document.getElementById('gallery-details')
+
+const body = document.querySelector('body')
+
 
 const events = [
     /*
@@ -36,19 +41,23 @@ const gallery = [
     */
     {
         title: 'Caverna',
-        path: 'assets/img/gallery/caverna.pn'
+        path: 'assets/img/gallery/caverna.png',
+        info: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem odio aliquid, perferendis quisquam et quis consequuntur quos eos reprehenderit dolorem nesciunt modi fuga optio nihil suscipit dolor maiores fugit repellendus? Lorem ipsum dolor sit amet consectetur adipisicing elit.'
     },
     {
         title: 'Lagoa',
-        path: 'assets/img/gallery/lagoa.png'
+        path: 'assets/img/gallery/lagoa.png',
+        info: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem odio aliquid, perferendis quisquam et quis consequuntur quos eos reprehenderit dolorem nesciunt modi fuga optio nihil suscipit dolor maiores fugit repellendus? Lorem ipsum dolor sit amet consectetur adipisicing elit.'
     },
     {
         title: 'Rampa do Voo Livre',
-        path: 'assets/img/gallery/vooLivre.jpeg'
+        path: 'assets/img/gallery/vooLivre.jpeg',
+        info: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem odio aliquid, perferendis quisquam et quis consequuntur quos eos reprehenderit dolorem nesciunt modi fuga optio nihil suscipit dolor maiores fugit repellendus? Lorem ipsum dolor sit amet consectetur adipisicing elit.'
     },
     {
         title: 'Igreja',
-        path: 'assets/img/gallery/igreja.jpeg'
+        path: 'assets/img/gallery/igreja.jpeg',
+        info: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem odio aliquid, perferendis quisquam et quis consequuntur quos eos reprehenderit dolorem nesciunt modi fuga optio nihil suscipit dolor maiores fugit repellendus? Lorem ipsum dolor sit amet consectetur adipisicing elit.'
     }
 ]
 
@@ -78,7 +87,52 @@ function createSlideBall() {
 function createGallery(object){
     let tag = ``
 
+    for (let img of object) {
+
+        tag = tag + `
+        <div class="gallery-field" onclick="openDetails('${object.indexOf(img)}')">
+            <div class="gallery-img">
+                <img src="${img.path}" alt="" onclick="open"> 
+            </div>
+        </div>
+        `
+    }
+
+    galleryContainer.innerHTML = tag
+    
+
 }
+
+
+createGallery(gallery)
+
+
+function changeDetails(index) {
+    const detailsTitle = document.getElementById('details-title')
+    const info = document.getElementById('details-info')
+    const detailsImg = document.getElementById('details-img')
+
+    console.log(document.getElementById('gallery').style.filter)
+
+
+    detailsImg.src = gallery[index].path
+    detailsTitle.innerHTML = gallery[index].title
+    info.innerHTML = gallery[index].info
+    
+}
+
+function changeHost(index) {
+    const hostTitle = document.getElementById('host-title')
+    const info = document.getElementById('host-info')
+    const hostImg = document.getElementById('host-img')
+    const hostDetails= document.getElementById('host-details')
+
+    hostImg.src = gallery[index].path
+    hostTitle.innerHTML = gallery[index].title
+    info.innerHTML = gallery[index].info
+    
+}
+
 
 async function changeEvent(direction) {
 
@@ -113,25 +167,32 @@ async function changeEvent(direction) {
  
 }
 
-
-
 arrowLeft.onclick = () => { changeEvent('left') }
 arrowRight.onclick = () => {changeEvent('right')}
 
 
 
-function toggleContent() {
-    const content = document.getElementById('gallery-details');
-    content.style.display = (content.style.display === 'block') ? 'none' : 'block';
+function closeDetails() {
+    const galleryDetails = document.getElementById('gallery-details')
+    galleryDetails.style.display = 'none'
 }
 
-document.addEventListener('click', function(event) {
-    const content = document.getElementById('gallery-details');
-    const container = document.querySelector('#gallery');
-    console.log("teste")
+function openDetails(title) {
+    
 
-    if (!container.contains(event.target) && content.style.display === 'block') {
-        content.style.display = 'none';
-        console.log('teste2')
-    }
-});
+    const galleryDetails = document.getElementById('gallery-details')
+    galleryDetails.style.display = 'flex'
+
+    changeDetails(title)
+}
+
+
+function openHost(title) {
+    
+
+    const hostDetails= document.getElementById('host-details')
+    hostDetails.style.display = 'flex'
+
+    changeHost(title)
+}
+
