@@ -2,8 +2,10 @@ const arrowLeft = document.getElementById('fa-arrow-left')
 const arrowRight = document.getElementById('fa-arrow-right')
 const imgPrincipal = document.getElementById('img-principal')
 
+const gallerySection = document.getElementById('gallery')
 const galleryContainer = document.getElementById('gallery-container')
 const galleryDetails = document.getElementById('gallery-details')
+
 
 const body = document.querySelector('body')
 
@@ -167,21 +169,22 @@ async function changeEvent(direction) {
  
 }
 
+
 arrowLeft.onclick = () => { changeEvent('left') }
 arrowRight.onclick = () => {changeEvent('right')}
 
 
-
-function closeDetails() {
-    const galleryDetails = document.getElementById('gallery-details')
-    galleryDetails.style.display = 'none'
+function closeDetails(event) {
+    
+    if (event.target.contains(document.getElementById('gallery-details'))) {
+        document.getElementById('gallery-details-container').style.display = 'none'
+    }
 }
-
+   
 function openDetails(title) {
     
-
-    const galleryDetails = document.getElementById('gallery-details')
-    galleryDetails.style.display = 'flex'
+    document.getElementById('gallery-details-container').style.display = 'flex'
+    document.getElementById('gallery-details').style.display = 'flex'
 
     changeDetails(title)
 }
@@ -190,9 +193,58 @@ function openDetails(title) {
 function openHost(title) {
     
 
-    const hostDetails= document.getElementById('host-details')
-    hostDetails.style.display = 'flex'
+    document.getElementById('host-details-container').style.display = 'flex'
 
     changeHost(title)
 }
+
+function closeHost(event) {
+
+     if (event.target.contains(document.getElementById('host-details'))) {
+        document.getElementById('host-details-container').style.display = 'none'
+    }
+}
+
+
+// function para abrir e fechar os detalhes com o click fora da div
+
+document.getElementById('closeBtnDetails').onclick = () => {document.getElementById('gallery-details-container').style.display = 'none'}
+document.getElementById('gallery-details-container').onclick = (event) => { closeDetails(event) }
+document.getElementById('host-details-container').onclick = (event) => { closeHost(event) }
+document.getElementById('closeBtnHost').onclick = () => {document.getElementById('host-details-container').style.display = 'none'}
+
+
+function centralizarNaSecaoAtual(divClicada) {
+    // Obtém a seção atual
+    var secaoAtual = divClicada.closest('section');
+
+    // Verifica se a seção atual existe
+    if (secaoAtual) {
+        // Obtém a posição superior da seção atual em relação ao topo da página
+        var posicaoSecao = secaoAtual.offsetTop;
+
+        // Obtém a altura da barra de navegação (se houver)
+        var alturaBarraNavegacao = document.querySelector('nav').offsetHeight || 0;
+
+        // Calcula a posição para centralizar a seção na tela
+        var posicaoCentralizada = posicaoSecao - (window.innerHeight / 2) + (secaoAtual.offsetHeight / 2) - alturaBarraNavegacao;
+
+        // Centraliza a tela na posição calculada
+        window.scrollTo({
+            top: posicaoCentralizada,
+            behavior: 'smooth' // Para uma animação suave, se o navegador suportar
+        });
+    }
+}
+
+// Adicione um evento de clique à sua div específica
+document.getElementById('gallery-container').addEventListener('click', function() {
+    centralizarNaSecaoAtual(this);
+});
+
+document.getElementById('host-container').addEventListener('click', function() {
+    centralizarNaSecaoAtual(this);
+});
+
+
 

@@ -5,14 +5,27 @@
     align-items: center;
 
     padding: 5vw;
-    position: relative  ;
+    position: relative;
+
+   
+}
+
+.gallery h2 {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    text-align: center;
+
+    font-size: clamp(2rem, 3vw, 5rem);
+    color: var(--color-blue);
+
 }
 
 .close {
     position: absolute;
     top: 20px;
     right: 20px;
-    color: black;
+    color: rgb(255, 0, 0);
     animation: all linear 300ms ease;
 }
 
@@ -24,13 +37,25 @@
     
 }
 
+.gallery-details-container {
+    position: absolute;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(2, 2, 2, 0.8) ;
+}
+
 .gallery-details {
     display: none;
     flex-direction: column;
 
-    margin-top: 2vw;
+    margin-top: 5vw;
     width: 50vw;
-    max-height: 70vh;
+    min-height: 60vh;
+    max-height: 75vh;
     
     position: absolute;
     z-index: 20000;
@@ -38,48 +63,66 @@
 
     overflow: hidden;
 
+    background-color: white;
+    border: 2px solid black;
+
 }
 
 .gallery-details div {
     display: flex;
+    flex-flow: row wrap;
     align-items: start;
 }
+
 
 .details-img {
     width: 100%;
     height: 50vh;
-    object-fit: cover;
-    border: 1px solid blue;
-    
 
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 }
 
 .details-info-container {
-    padding: 1vw 2vw;
-    color: gray;
+    flex: 1 5 20rem;
     display: flex;
     flex-direction: column;
-    height: 70%;
+
+    padding: 1vw 2vw;
+    height: 100%;
+    width: 70%;
+
+    font-size: clamp(.9rem, .9vw, 3rem);
+    color: gray;
 }
 
 .details-info-container h3{
     color: var(--color-blue);
+    font-size: clamp(2rem, 2vw, 3rem);
 }
 
-.details-map {
-    width: 100%;
+.details-maps {
+    display: block;
+    flex: 1 1 10rem;
     height: 100%;
-    object-fit: cover;
+    aspect-ratio: 4/3;
+    
 }
+
+
+
 
 .gallery-container {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
+    gap: 2vw;
+    
     width: 100%;
     padding: 20px;
-    gap: 20px;
+   
 }
 
 .gallery-field {
@@ -87,11 +130,27 @@
     aspect-ratio: 4/3;
 }
 
+
 .gallery-img {
-    width: 20vw;
+    flex: 1 3 10vw;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    width: 20vw;
+    min-width: 250px;
+
+
+    object-fit: cover;
+    border-radius: 20px;
+    border: 2px solid black;
+    box-shadow: 10px 10px 10px var(--color-blue);
+    overflow: hidden;
+}
+
+.gallery-img:hover {
+    cursor: pointer;
+    box-shadow: 10px 10px 10px black;
 }
 
 

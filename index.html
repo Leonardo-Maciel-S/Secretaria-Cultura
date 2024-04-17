@@ -104,21 +104,22 @@
         <h2>Pontos Turisticos / Onde Visitar / Galeria</h2>
 
         <!-- essa div vai ficar oculta -->
-        <div id="gallery-details" class="gallery-details">    
-            <i  class="fa-solid fa-xmark fa-xl close" onclick="closeDetails()"></i>
+        <div id="gallery-details-container" class="gallery-details-container">
+            <div id="gallery-details" class="gallery-details">    
+                <i id="closeBtnDetails"  class="fa-solid fa-xmark fa-xl close"></i>
             
-            <img id="details-img" class="details-img" src="assets/img/gallery/lagoa.png" alt="">
+                <img id="details-img" class="details-img" src="assets/img/gallery/lagoa.png" alt="">
 
-            <div>
-                <div class="details-info-container">
-                    <h3 id="details-title">Lugar</h3>
-                    <p id="details-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est hic aut doloremque, omnis sit iure veniam porro libero inventore assumenda dolorum facilis sequi, animi ipsa? Non officia dolores ratione hic?</p>            
-                </div>
                 <div>
-                    <img id="details-map" class="details-map" src="assets/img/secretaria-maps.png" alt="">
+                    <div class="details-info-container">
+                        <h3 id="details-title">Lugar</h3>
+                        <p id="details-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est hic aut doloremque, omnis sit iure veniam porro libero inventore assumenda dolorum facilis sequi, animi ipsa? Non officia dolores ratione hic?</p>            
+                    </div>
+                    <a target="_blank" class="details-maps">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3845.497211650186!2d-47.61260402408739!3d-15.457664914755417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a6ffe93024301%3A0x8209598dcff6975a!2sSecretaria%20De%20Cultura%2C%20Esporte%20E%20Lazer!5e0!3m2!1spt-BR!2sbr!4v1713305190815!5m2!1spt-BR!2sbr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </a>
                 </div>
             </div>
-
         </div>
 
         <div id="gallery-container" class="gallery-container">
@@ -127,25 +128,10 @@
     </section>
 
     <section id="host" class="host area-site">
+        
+        
 
-        <div id="host-details" class="host-details">    
-            
-            <img id="host-img" class="host-img" src="assets/img/gallery/lagoa.png" alt="">
-
-            <div>
-                <div class="host-info-container">
-                    <h3 id="host-title">Lugar</h3>
-                    <p id="host-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est hic aut doloremque, omnis sit iure veniam porro libero inventore assumenda dolorum facilis sequi, animi ipsa? Non officia dolores ratione hic?</p>            
-                </div>
-                <div>
-                    <img id="host-map" class="host-map" src="assets/img/secretaria-maps.png" alt="">
-                </div>
-            </div>
-
-        </div>
-
-
-        <div class="host-container-host" >
+        <div id="host-container" class="host-container-host" >
             <h3>Hospedagem</h3>
 
             <div class="host-container">
@@ -155,14 +141,14 @@
                         <img src="assets/img/gallery/igreja.jpeg" alt="" onclick="openHost('4')">
                     </div>
                     <div>
-                        <h4>Nome</h4>
+                        <h4>Igreja</h4>
                         <p>description</p>
                     </div>
                 </div>
                 
                 <div class="host-preview">
                     <div class="host-preview-img">
-                        <img src="assets/img/gallery/igreja.jpeg" alt="">
+                        <img src="assets/img/gallery/lagoa.png" alt="">
                     </div>
                     <div>
                         <h4>Nome</h4>
@@ -172,7 +158,7 @@
 
                 <div class="host-preview">
                     <div class="host-preview-img">
-                        <img src="assets/img/gallery/igreja.jpeg" alt="">
+                        <img src="assets/img/gallery/vooLivre.jpeg" alt="">
                     </div>
                     <div>
                         <h4>Nome</h4>
@@ -182,7 +168,7 @@
 
                 <div class="host-preview">
                     <div class="host-preview-img">
-                        <img src="assets/img/gallery/igreja.jpeg" alt="">
+                        <img src="assets/img/gallery/caverna.png" alt="">
                     </div>
                     <div>
                         <h4>Nome</h4>
@@ -191,15 +177,59 @@
                 </div>
 
             </div>
-        </section>
+        </div>
 
 
-        <section class="laws area-site bg-blue">
+       <div id="host-details-container" class="host-details-container">
 
-            <h3>Leis de incentivo à cultura</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eum tempore quidem reprehenderit assumenda veritatis nam fugiat! Eos repudiandae, laudantium asperiores natus unde rem illum quas aspernatur totam consequuntur? Odio.</p>
+            <div id="host-details" class="host-details">   
 
-        </section>
+                <i id="closeBtnHost"  class="fa-solid fa-xmark fa-xl close"></i>
+                <img id="host-img" class="host-img" src="assets/img/gallery/lagoa.png" alt="">
+
+                <div>
+                    <div class="host-info-container">
+                        <h3 id="host-title">Lugar</h3>
+                        <p id="host-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est hic aut doloremque, omnis sit iure veniam porro libero inventore assumenda dolorum facilis sequi, animi ipsa? Non officia dolores ratione hic?</p>            
+                    </div>
+
+                    <a target="_blank" class="host-maps">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3845.497211650186!2d-47.61260402408739!3d-15.457664914755417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a6ffe93024301%3A0x8209598dcff6975a!2sSecretaria%20De%20Cultura%2C%20Esporte%20E%20Lazer!5e0!3m2!1spt-BR!2sbr!4v1713305190815!5m2!1spt-BR!2sbr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </a>
+                </div>
+
+            <div>
+       </div>
+    </section>
+
+
+    <section class="laws area-site bg-blue">
+
+        <h3>Leis de incentivo à cultura</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eum tempore quidem reprehenderit assumenda veritatis nam fugiat! Eos repudiandae, laudantium asperiores natus unde rem illum quas aspernatur totam consequuntur? Odio.</p>
+
+    </section>
+
+    <footer>
+        <div class="creators">
+            <h4>Criado por:</h4>
+
+            <a>
+                <i class="fa-brands fa-linkedin fa-2xl"></i>
+                <h5>Leonardo</h5>
+            </a>
+            
+            <a>
+                <i class="fa-brands fa-instagram fa-2xl"></i>
+                <h5>Eduardo</h5>
+            </a>
+
+            <a>
+                <i class="fa-brands fa-linkedin fa-2xl"></i>
+                <h5>Gabriel</h5>
+            </a>
+        </div>
+    </footer>
 
     <script src="assets/scripts/script.js"></script>
 </body>
