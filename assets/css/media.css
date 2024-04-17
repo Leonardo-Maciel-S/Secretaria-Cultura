@@ -1,0 +1,105 @@
+@media (max-width: 375px){
+    html {
+        scrollbar-width: unset;
+        scroll-behavior: smooth;
+        scroll-snap-type: initial;
+    }
+
+    /* BARRA AZUL */
+
+    .nav-bar {
+        padding: 5vw 3vw;
+        padding-right: 5vw;
+        gap: 0px;
+       
+    }
+    
+    .logo-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60%;
+        gap: 20px;
+        padding-left: 2vw;
+    }
+    
+    .logo {
+        width: 20%;
+        min-width: 10rem;
+        object-fit: cover;
+    }
+    
+    .social-media {
+        display: flex;
+        gap: 10px;
+        color: var(--color-white);
+    }
+
+    /* PRIMEIRA TELA */
+
+    .cover-text {
+        display: flex;
+        flex-flow: column wrap;
+    
+        gap: 20px;
+    
+        width: 50%;
+        padding: 0 0 0 5%;
+        color: var(--color-white);
+        backdrop-filter: blur(1px);
+    
+    
+    }
+    
+    .cover-text h1 {
+        font-size: 2.5rem;
+        color: var(--color-blue);
+        font-weight: normal;
+    
+    
+    }
+    
+    .cover-text p {
+        font-size: 1rem;
+        font-weight: 400;
+        width: auto;
+    }
+
+
+    /* info */
+
+    .info {
+
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 10vw;
+    
+        padding: 20px;
+    }
+
+    .info-text {
+        width: 100%;
+        display: flex;
+        flex-flow: column wrap;
+        font-size: .8rem;
+        font-weight: 400;
+    }
+    
+    .info-text h2 {
+        font-size: 2rem;
+        font-weight: normal;
+    }
+    
+    .info-text-img {
+        width: 70%;
+    }
+    
+    .info-text-img img{
+        width: 100%;
+        object-fit: cover;
+    }
+
+}
