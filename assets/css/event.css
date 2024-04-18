@@ -8,7 +8,7 @@
 }
 
 .event-container {
-    padding: 1vw 5vw 0 5vw;
+    padding: 3vw 5vw 0 5vw;
     width: 80%;
 
     position: relative;
@@ -48,6 +48,8 @@
     overflow: hidden;
     border-radius: 20px;
 
+    margin-bottom: 4vw;
+
 }
 
 
@@ -82,10 +84,12 @@
 
 .event-slide-ball {
     position: absolute;
-    bottom: 50px;
+    bottom: 100px;
     z-index: 2;
+    display: flex;
+    gap: 10px;
 }
 
 .event-slide-ball i {
-    text-shadow: 3px 3px black;
+    text-shadow: 3px 1px black;
 }

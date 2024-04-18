@@ -1,4 +1,4 @@
-@media (max-width: 375px){
+@media (max-width: 400px){
     html {
         scrollbar-width: unset;
         scroll-behavior: smooth;
@@ -12,6 +12,7 @@
         padding-right: 5vw;
         gap: 0px;
        
+
     }
     
     .logo-container {
@@ -38,15 +39,9 @@
     /* PRIMEIRA TELA */
 
     .cover-text {
-        display: flex;
-        flex-flow: column wrap;
-    
-        gap: 20px;
-    
-        width: 50%;
-        padding: 0 0 0 5%;
-        color: var(--color-white);
-        backdrop-filter: blur(1px);
+
+        width: 70%;
+ 
     
     
     }
@@ -101,5 +96,62 @@
         width: 100%;
         object-fit: cover;
     }
+    
 
+    /* detalhes da galeria e hospedagem */
+
+    .gallery-details, .host-details {
+        width: 80%;
+
+    }
+
+    .host-info-container, .details-info-container {
+        padding: 10px;
+    }
+    
+    .gallery-details p, .host-details p{
+        font-size: 10px;
+        
+    }
+
+
+
+    .details-maps, .host-maps {
+        width: 50%;
+        aspect-ratio: 16/9;
+        
+    }
+
+    /* galeria e hospedagem */
+
+    .host-container {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        width: 100%;
+        padding: 20px;
+        gap: 2vw;
+        font-size: 1rem;
+    }
+
+    .host-preview {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+
+    }
+
+    .host-preview-img {
+        
+        width: 25vw;
+        height: 25vw;
+
+    }
+
+    #closeBtnDetails {
+        font-size: .5rem;
+    }
 }

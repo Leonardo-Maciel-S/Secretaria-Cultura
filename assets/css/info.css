@@ -18,7 +18,7 @@
 }
 
 .info-text h2 {
-    font-size: clamp(2.5rem, 3vw, 6rem);
+    font-size: clamp(1.5rem, 4vw, 4rem);
     font-weight: normal;
 }
 

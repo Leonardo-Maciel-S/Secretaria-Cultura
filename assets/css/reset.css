@@ -5,12 +5,13 @@
 }
 
 html {
-    scrollbar-width: thin;
-    scroll-snap-type: y proximity;
+    scrollbar-width: none;
     scroll-behavior: smooth;
     font-family: var(--font-title);
     font-weight: normal;
     max-width: 100vw;
+    overflow-x: hidden;
+    background-color: white;
 }
 
 
@@ -18,8 +19,3 @@ a, a:visited, a:active {
     text-decoration: none;
 }
 
-body {
-    max-width: 100vw;
-    width: 100vw;
-    overflow-x: hidden;
-}

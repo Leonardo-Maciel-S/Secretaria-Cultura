@@ -7,6 +7,7 @@ const galleryContainer = document.getElementById('gallery-container')
 const galleryDetails = document.getElementById('gallery-details')
 
 
+
 const body = document.querySelector('body')
 
 
@@ -31,6 +32,7 @@ const events = [
         path: 'https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
         //path: 'assets/img/show.jpeg'
     },
+
 ]
 
 let position = Math.floor(events.length / 2)
@@ -60,8 +62,29 @@ const gallery = [
         title: 'Igreja',
         path: 'assets/img/gallery/igreja.jpeg',
         info: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem odio aliquid, perferendis quisquam et quis consequuntur quos eos reprehenderit dolorem nesciunt modi fuga optio nihil suscipit dolor maiores fugit repellendus? Lorem ipsum dolor sit amet consectetur adipisicing elit.'
+    },
+     {
+        title: 'Cruz',
+        path: 'assets/img/gallery/cruz.jpg',
+         info: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem odio aliquid, perferendis quisquam et quis.',
+    },
+    {
+        title: 'lagoa Norte',
+        path: 'assets/img/gallery/lagoa2.jpg',
+        info: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem odio aliquid, perferendis quisquam et quis consequuntur quos eos reprehenderit dolorem nesciunt modi fuga optio nihil suscipit dolor.'
+    },
+    {
+        title: 'Rampa do Voo Livre Norte',
+        path: 'assets/img/gallery/vooLivre2.jpg',
+        info: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem odio aliquid, perferendis quisquam et quis consequuntur quos eos reprehenderit dolorem nesciunt modi fuga optio nihil suscipit dolor maiores fugit repellendus? Lorem ipsum dolor sit amet consectetur adipisicing elit.'
+    },
+    {
+        title: 'Parque Ecologico',
+        path: 'assets/img/gallery/parqueEcologico.jpg',
+        info: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit.'
     }
 ]
+
 
 function createSlideBall() {
 
@@ -73,17 +96,40 @@ function createSlideBall() {
         if (index == position) {
             //cria a bolinha de cor amarela na posição da img
             slideBallContent = slideBallContent + `
-            <i id="fa-circle-middle" class="fa-solid fa-circle" style="color: #FFD700;"></i>
+            <i id="ball${index}" class="fa-solid fa-circle color-yellow" onclick="changeEventsByBall(${index})"></i>
             `
         } else {
             //cria a bolinha de cor branca para o resto das img
             slideBallContent = slideBallContent + `
-            <i id="fa-circle-middle" class="fa-solid fa-circle" style="color: #EDEDED;"></i>
+            <i id="ball${index}" class="fa-solid fa-circle color-white" onclick="changeEventsByBall(${index})"></i>
             `
         }
     }
 
     div.innerHTML = slideBallContent
+}
+
+function changeColorBall(last) {
+
+    console.log(last, 'teste', position)
+
+    document.getElementById(`ball${last}`).style.color = 'white'
+    document.getElementById(`ball${position}`).style.color = 'yellow'
+
+    
+
+}
+
+function changeEventsByBall(id) {
+
+    let lastPosition = position
+
+    position = id
+
+    imgPrincipal.src = events[parseInt(position)].path
+    
+    changeColorBall(lastPosition)
+   
 }
 
 function createGallery(object){
@@ -105,10 +151,6 @@ function createGallery(object){
 
 }
 
-
-createGallery(gallery)
-
-
 function changeDetails(index) {
     const detailsTitle = document.getElementById('details-title')
     const info = document.getElementById('details-info')
@@ -127,27 +169,29 @@ function changeHost(index) {
     const hostTitle = document.getElementById('host-title')
     const info = document.getElementById('host-info')
     const hostImg = document.getElementById('host-img')
-    const hostDetails= document.getElementById('host-details')
 
-    hostImg.src = gallery[index].path
-    hostTitle.innerHTML = gallery[index].title
-    info.innerHTML = gallery[index].info
+    hostImg.src = gallery[parseInt(index)].path
+    hostTitle.innerHTML = gallery[parseInt(index)].title
+    info.innerHTML = gallery[parseInt(index)].info
     
 }
 
+function changeEvent(direction) {
 
-async function changeEvent(direction) {
-
+    const lastPosition = position
     //botão pra esquerda
     if (direction == "left") {
+
+        
         position = position - 1
 
         //se a posição tiver fora do escopo da lista ele mantem no primeiro evento
         if (!events[position]) {
-            position = 0
+            position = events.length -1
         }
 
-        document.getElementById('img-principal').src = events[position].path
+        imgPrincipal.src = events[position].path
+        
         
     }
 
@@ -157,22 +201,19 @@ async function changeEvent(direction) {
 
         //se a posição tiver fora do escopo da lista ele mantem no ultimo evento
         if (!events[position]) {
-            position = events.length - 1
+            position = 0
         }
 
-        document.getElementById('img-principal').src = events[position].path
+        imgPrincipal.src = events[position].path
     
 
     }
 
-    createSlideBall()
- 
+        
+    changeColorBall(lastPosition)
+
+
 }
-
-
-arrowLeft.onclick = () => { changeEvent('left') }
-arrowRight.onclick = () => {changeEvent('right')}
-
 
 function closeDetails(event) {
     
@@ -184,34 +225,57 @@ function closeDetails(event) {
 function openDetails(title) {
     
     document.getElementById('gallery-details-container').style.display = 'flex'
+    changeDetails(title)
     document.getElementById('gallery-details').style.display = 'flex'
 
-    changeDetails(title)
+    
 }
 
 
 function openHost(title) {
     
+    const detailsContainer = document.getElementById('host-details-container')
+    detailsContainer.style.display = 'flex'
+    document.getElementsByTagName('html')[0].style.overflow = 'hidden';
 
-    document.getElementById('host-details-container').style.display = 'flex'
 
     changeHost(title)
 }
 
 function closeHost(event) {
 
+    const detailsContainer = document.getElementById('host-details-container')
+
      if (event.target.contains(document.getElementById('host-details'))) {
-        document.getElementById('host-details-container').style.display = 'none'
+        detailsContainer.style.display = 'none'
+         
+        document.getElementsByTagName('html')[0].style.overflow = 'visible';
+
     }
 }
 
 
+createGallery(gallery)
+arrowLeft.onclick = () => { changeEvent('left') }
+arrowRight.onclick = () => {changeEvent('right')}
+
 // function para abrir e fechar os detalhes com o click fora da div
 
-document.getElementById('closeBtnDetails').onclick = () => {document.getElementById('gallery-details-container').style.display = 'none'}
+document.getElementById('closeBtnDetails').onclick = () => {
+    
+    document.getElementById('gallery-details-container').style.display = 'none'
+    document.getElementsByTagName('html')[0].style.overflow = 'visible';
+
+}
+
 document.getElementById('gallery-details-container').onclick = (event) => { closeDetails(event) }
+
 document.getElementById('host-details-container').onclick = (event) => { closeHost(event) }
-document.getElementById('closeBtnHost').onclick = () => {document.getElementById('host-details-container').style.display = 'none'}
+
+document.getElementById('closeBtnHost').onclick = () => {
+    document.getElementById('host-details-container').style.display = 'none'
+    document.getElementsByTagName('html')[0].style.overflow = 'visible';
+}
 
 
 function centralizarNaSecaoAtual(divClicada) {
@@ -227,7 +291,7 @@ function centralizarNaSecaoAtual(divClicada) {
         var alturaBarraNavegacao = document.querySelector('nav').offsetHeight || 0;
 
         // Calcula a posição para centralizar a seção na tela
-        var posicaoCentralizada = posicaoSecao - (window.innerHeight / 2) + (secaoAtual.offsetHeight / 2) - alturaBarraNavegacao;
+        var posicaoCentralizada = posicaoSecao - (window.innerHeight / 2) + (secaoAtual.offsetHeight / 2);
 
         // Centraliza a tela na posição calculada
         window.scrollTo({
@@ -247,4 +311,6 @@ document.getElementById('host-container').addEventListener('click', function() {
 });
 
 
+
+createSlideBall()
 

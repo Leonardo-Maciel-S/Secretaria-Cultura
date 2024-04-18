@@ -4,6 +4,7 @@
     --color-yellow: #FFD700;
     --color-white: #EDEDED;
     --color-red: #E6332A;
+    --color-gray: #9E9E9E;
     --font-title: "Bebas Neue", sans-serif;
     --font-bold: 400;
     --fonte-p: "Sora", sans-serif;
@@ -14,12 +15,13 @@
     max-width: 100vw;
     min-height: 100vh;
     padding-top: 5vw;
-    scroll-snap-align: center;   
+    overflow-x: hidden;    
 
 }
 
 .bg-white {
     background-color: var(--color-white);
+    z-index: 0;
 }
 
 .bg-blue {
@@ -44,5 +46,13 @@
 
 p {
     font-family: var(--fonte-p);
+}
+
+.color-white {
+    color: var(--color-white);
+}
+
+.color-yellow {
+    color: var(--color-yellow);
 }
 
