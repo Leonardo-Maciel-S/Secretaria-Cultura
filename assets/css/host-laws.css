@@ -4,7 +4,6 @@
     justify-content: center;
     align-items: center;
     font-size: 1.5rem;
-    gap: 5rem;
     color: var(--color-gray);
 }
 
@@ -21,6 +20,7 @@
 .host-container-host {
     padding: 2rem 0;
     width: 100%;
+    
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
@@ -28,14 +28,17 @@
     gap: 2rem;
 }
 
+
+
 .host-container {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
-    align-items: center;
+    align-items: flex-start;
     padding: 50px;
-    width: 100%;
-    gap: 2vw;
+    width: 90%;
+    gap: 40px;
+
     
 }
 
@@ -46,17 +49,21 @@
 }
 
 .host-preview {
+
     flex: 1 0 50px;
     display: flex;
     flex-flow: row wrap;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+
     text-align: left;
     gap: 20px;
+
 
 }
 
 .host-preview-img {
+    justify-self: flex-start;
     width: 20vh;
     height: 20vh;
     border-radius: 50%;
@@ -86,29 +93,30 @@
     padding-top: 5vw;
 
     position: absolute;
-    z-index: 0;
+    z-index: 20000;
 
     display: none;
     justify-content: center;
     align-items: center;
 
     width: 100vw;
-    height: 100vh;
+    height: 500vh;
     background-color: rgba(2, 2, 2, 0.8) ;
 }
 
 
 .host-details {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 
-    width: 80vw;
+    max-width: 60vw;
     min-height: 60vh;
-    max-height: 75vh;
+    max-height: 85vh;
     
     position: absolute;
-    z-index: 20000;
+    z-index: 21000;
     border-radius: 20px;
+    /* aspect-ratio: 2/2; */
 
     background-color: white;
     box-shadow: 10px 10px 50px rgba(0, 0, 0, .5);
@@ -119,8 +127,8 @@
 .host-img {
     object-fit: cover;
 
-    width: 60%;
-    
+    width: 100%;
+    height: 50vh;
 
 }
 
@@ -128,12 +136,15 @@
 .host-details div {
     display: flex;
     flex-flow: row wrap;
-    align-items: start;
+    /* align-items: start; */
+    height: 100%;
+
 }
 
 
 .host-info-container {
     flex: 1 5 20rem;
+
     padding: 1vw 2vw;
     color: gray;
     display: flex;
@@ -143,14 +154,14 @@
 
     font-size: clamp(.9rem, .9vw, 3rem);
 
-    gap: 20px;
 }
 
 
 
 .host-info-sociais {
+    padding: 20px 0px;
     gap: 20px;
-    width: 100%;
+  
 }
 
 .host-info-sociais a, .host-info-sociais a:visited  {
@@ -171,11 +182,24 @@
 }
 
 .host-maps {
-    display: block;
-    flex: 1 1 10rem;
-    height: 100%;
-    aspect-ratio: 4/3;
+    flex: 1 3 5rem;
+
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0;
+    max-height: 20%;
+    min-width: 250px;
+    flex: 1 3 5rem;
+    overflow: hidden;
+    border: 1px solid red;
+
 }
+
+
 
 
 
@@ -185,19 +209,19 @@
 /* laws */
 
 .laws {
-    padding: 10vw 5vw;
+    padding: 10vw 10vw;
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
     align-items: flex-start;
     text-align: left;
     color: var(--color-white);
-    font-size: clamp(1rem, 1vw, 4rem);
+    font-size: clamp(1rem, .5vw, 4rem);
 
 }
 
 .laws h3 {
     color: white;
-    font-size: clamp(2rem, 3vw, 6rem);
+    font-size: clamp(2rem, 2vw, 6rem);
 }
 

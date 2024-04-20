@@ -1,4 +1,4 @@
-.info {
+#info {
 
     display: flex;
     flex-wrap: wrap;
@@ -6,15 +6,18 @@
     align-items: center;
     gap: 10vw;
 
-    padding: inherit 3vw 0 3vw;
+    padding: 3vh 2vw;
 }
 
 .info-text {
-    width: 40%;
+    width: 50%;
+    max-width: 90%;
     display: flex;
     flex-flow: column wrap;
-    font-size: clamp(1rem, 1.3vw, 4rem);
+    font-size: clamp(1rem, 1vw, 4rem);
     font-weight: 400;
+
+
 }
 
 .info-text h2 {
@@ -23,7 +26,8 @@
 }
 
 .info-text-img {
-    width: 25%;
+    min-width: 250px;
+    max-width: 25%;
 }
 
 .info-text-img img{

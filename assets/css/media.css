@@ -1,4 +1,9 @@
 @media (max-width: 400px){
+
+    :hover {
+        transform: unset;
+    }
+
     html {
         scrollbar-width: unset;
         scroll-behavior: smooth;
@@ -8,7 +13,7 @@
     /* BARRA AZUL */
 
     .nav-bar {
-        padding: 5vw 3vw;
+        padding: 3vw 3vw;
         padding-right: 5vw;
         gap: 0px;
        
@@ -16,12 +21,11 @@
     }
     
     .logo-container {
-        display: flex;
+        display: grid;
         justify-content: center;
         align-items: center;
         width: 60%;
-        gap: 20px;
-        padding-left: 2vw;
+
     }
     
     .logo {
@@ -48,7 +52,6 @@
     
     .cover-text h1 {
         font-size: 2.5rem;
-        color: var(--color-blue);
         font-weight: normal;
     
     
@@ -89,7 +92,7 @@
     }
     
     .info-text-img {
-        width: 70%;
+        width: 250px;
     }
     
     .info-text-img img{
@@ -100,33 +103,74 @@
 
     /* detalhes da galeria e hospedagem */
 
-    .gallery-details, .host-details {
-        width: 80%;
+    .host-details-container, .gallery-details-container{
+        padding-top: 0;
+    }
 
+    .gallery-details, .host-details {
+        margin-top: 0;
+        position: relative;
+        width: 95%;
+        min-width: 80%;
+        margin-top: 70px;
+        z-index: 1000;
+
+        /* max-height: 60vh; */
+    }
+
+
+    .host-img {
+       
+        max-height: 200px;
+    }
+        
+    .details-info-container h3 {
+
+        font-size: 36px;
+        font-size: clamp(1.5rem, 4vw, 4rem);
     }
 
     .host-info-container, .details-info-container {
+        
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+
+    }
+
+    .host-info-container{
         padding: 10px;
     }
     
+
     .gallery-details p, .host-details p{
-        font-size: 10px;
+        font-size: 12px;
+        
         
     }
 
 
 
     .details-maps, .host-maps {
+
+        height: 200px;
         width: 50%;
-        aspect-ratio: 16/9;
+        max-width: 100%;
+      
         
     }
 
     /* galeria e hospedagem */
 
+    .gallery-container, .host-container {
+
+        grid-template-columns: repeat(auto-fit, minmax(110px, 45vw));
+      
+        grid-gap: 2px;
+    }
+
     .host-container {
-        display: flex;
-        flex-flow: row wrap;
+
         justify-content: center;
         width: 100%;
         padding: 20px;
@@ -136,22 +180,64 @@
 
     .host-preview {
         display: flex;
+        height: 100%;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         text-align: center;
 
+    }
 
+    .host-info-sociais {
+        display: flex;
+        padding: 20px 0px;
+        gap: 10px;
+      
     }
 
     .host-preview-img {
         
-        width: 25vw;
-        height: 25vw;
+        width: 18vh;
+        height: 18vh;
 
     }
 
-    #closeBtnDetails {
-        font-size: .5rem;
+     .host-preview h4 {
+        height: fit-content;
+        line-height: 1.9rem;
+
     }
+
+
+
+
+
+
+    /* event */
+
+
+    .event-container {
+        padding: 20px;
+        margin: 200px 0;
+        width: 100vw;
+
+    }
+
+    .event-container div > img {
+        width: 100%;
+        object-fit: fill;
+        border-radius: 0px;
+        z-index: -1;
+    }
+
+    .img-principal {
+        margin-bottom: 0;
+        border-radius: 0px;
+    }
+
+    .event-slide-ball {
+        bottom: 30px;
+    }
+    /*  */
 }
+
