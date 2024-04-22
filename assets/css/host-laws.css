@@ -90,7 +90,7 @@
 /* Tela de detalhes das host */
 
 .host-details-container {
-    padding-top: 5vw;
+    padding-top: 2vw;
 
     position: absolute;
     z-index: 20000;

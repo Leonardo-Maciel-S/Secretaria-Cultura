@@ -12,7 +12,7 @@
 
     background-color: var(--color-blue);
 
-    z-index: 5;
+    z-index: 1000;
 
    
 }
