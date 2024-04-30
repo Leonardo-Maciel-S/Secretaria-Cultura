@@ -60,14 +60,14 @@ const gallery = [
   },
   {
     title: "Rampa do Voo Livre",
-    path: "assets/img/gallery/vooLivre.jpeg",
+    path: "assets/img/gallery/vooLivre.jpg",
     info: "A rampa do Voo Livre é o playground dos aventureiros, onde sonhos de voar se tornam realidade. Com vistas panorâmicas deslumbrantes e uma emoção indescritível, é o lugar perfeito para quem busca adrenalina e liberdade nos céus, em um ambiente seguro e emocionante.",
     iframe:
       '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d492094.63040893024!2d-47.29265296453684!3d-15.51187868032899!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9350981e295a1965%3A0x51ee588a03b4920f!2sRampa%20de%20voo%20livre%20do%20Morro%20do%20Urubu!5e0!3m2!1spt-BR!2sbr!4v1713566206854!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>',
   },
   {
     title: "Igreja",
-    path: "assets/img/gallery/igreja.jpeg",
+    path: "assets/img/gallery/igreja.jpg",
     info: "Esta igreja histórica é mais do que um local de adoração; é um monumento à fé e à arte. Sua imponente arquitetura gótica ou barroca, ornamentada com detalhes intricados, conta a história de séculos de devoção e cultura. Desde os seus primeiros alicerces até os elaborados vitrais que filtram a luz celestial, cada elemento é um testemunho da dedicação dos que a construíram e preservaram ao longo dos anos.",
     iframe: "",
   },

@@ -42,7 +42,7 @@
 
 .cover-container {
     background-image: linear-gradient(90deg, rgba(29,29,27,1) 0%, rgba(29,29,27,0.335171568627451) 30%, rgba(29,29,27,0.1110819327731093) 45%, rgba(29,29,27,0) 60%, rgba(29,29,27,0) 100%),
-    url('/assets/img/fundo-cover.jpeg');
+    url('../img/logos/fundo-cover.jpg');
     background-position: center;
     background-size: cover;
 
