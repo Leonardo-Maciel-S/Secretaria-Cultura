@@ -4,7 +4,9 @@ const imgPrincipal = document.getElementById("img-principal");
 const closeBtnDetails = document.getElementById("closeBtnDetails");
 
 const gallerySection = document.getElementById("gallery");
-const galleryDetailsContainer = document.getElementById("gallery-details-container");
+const galleryDetailsContainer = document.getElementById(
+  "gallery-details-container"
+);
 const galleryContainer = document.getElementById("gallery-container");
 const galleryDetails = document.getElementById("gallery-details");
 
@@ -162,12 +164,14 @@ function createGallery(object) {
     tagGallery =
       tagGallery +
       `
-        <div class="gallery-field" onclick="openDetails('${object.indexOf(place)}')">
+        <div class="gallery-field" onclick="openDetails('${object.indexOf(
+          place
+        )}')">
             <div class="gallery-img">
                 <img src="${place.path}" alt="" onclick="open"> 
             </div>
         </div>
-      `;
+        `;
   }
 
   galleryContainer.innerHTML = tagGallery;
@@ -183,7 +187,11 @@ function createHost(object) {
             <div class="host-preview">
 
                     <div class="host-preview-img">
-                        <img src="${place.path}" alt="" onclick="openHost('${object.indexOf(place)}')">
+                        <img src="${
+                          place.path
+                        }" alt="" onclick="openHost('${object.indexOf(
+        place
+      )}')">
                     </div>
                     
                     <div>
