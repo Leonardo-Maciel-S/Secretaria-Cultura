@@ -7,9 +7,9 @@
 - ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
   
 ## Contribuintes
-1. Leonardo Maciel (Desenvolvedor Front-End) - https://www.linkedin.com/in/leonardo-maciel-s/
-2. Eduardo Farias (Designer Gráfico) linkedin: https://www.linkedin.com/in/eduardo-c-farias/
-3. Gabriel Soares (project manager) - https://www.linkedin.com/in/gabrielsoacc/
+1. Leonardo Maciel (Desenvolvedor Front-End) Linkedin - <a href="https://www.linkedin.com/in/leonardo-maciel-s/"></a>
+2. Eduardo Farias (Designer Gráfico) linkedin: <a href="https://www.linkedin.com/in/eduardo-c-farias/"/></a>
+3. Gabriel Soares (project manager) Linkedin - <a href="https://www.linkedin.com/in/gabrielsoacc/"/></a>
 
 ### Motivos da criação
 - Cursando o terceiro semestre da faculdade de Análise e Desenvolvimento de Sistemas foi me proposto uma matéria voltada a desenvolver um projeto que contribuisse para a comunidade.
