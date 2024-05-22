@@ -7,13 +7,13 @@
 - ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
   
 ## Contribuintes
-1. Leonardo Maciel (Front-End) Linkedin: <a href="https://www.linkedin.com/in/leonardo-maciel-s/" target="_blank"> ![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)
+1. Leonardo Maciel (Front-End) <a href="https://www.linkedin.com/in/leonardo-maciel-s/" target="_blank"> ![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)
 </a>
 
-2. Eduardo Farias (Designer Gráfico) linkedin: <a href="https://www.linkedin.com/in/eduardo-c-farias/" target="_blank"> ![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)
+2. Eduardo Farias (Designer Gráfico) <a href="https://www.linkedin.com/in/eduardo-c-farias/" target="_blank"> ![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)
 </a>
 
-3. Gabriel Soares (project manager) Linkedin: <a href="https://www.linkedin.com/in/gabrielsoacc/" target="_blank"> ![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)
+3. Gabriel Soares (project manager) <a href="https://www.linkedin.com/in/gabrielsoacc/" target="_blank"> ![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)
 </a>
 
 ### Motivos da criação
