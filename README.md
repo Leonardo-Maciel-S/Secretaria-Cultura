@@ -29,3 +29,5 @@
 - Em 2 dias foi feito o wireframe, desenvolvi o código em 7 dias (mexendo apenas 2 a 3 horas por dia na parte da noite) e fui refatorando o código em outros 7 dias.
 - Comecei a estrutura do html e adicionando estilos, depois ajustei a responsividade e por ultimos as funções em JavaScript para interação na pagina.
 
+# Relato do atual (2024) secretário da cultura de Planaltina de Goiás sobre o projeto:
+- "Eu Ramon franck da Silva Secretaria de cultura e turismo de Planaltina Goiás, venho por meio deste parabenizar os alunos pelos empenho e trabalho do site direcionado a Secretaria, achei bastante interessante e muito eficiente o trabalho, parabéns pela dedicação e sabedoria, em nome do Prefeito nos colocamos a disposição. Grato"
